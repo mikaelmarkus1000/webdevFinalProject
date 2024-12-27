@@ -14,21 +14,128 @@
 }
 
 @layer accordion {
-  .accordion {
+  .accordion {  
+    display: block;
+    overflow: hidden;
 
   }
+  .accordion .block{
+    border: 1px solid #1F4D71;
+    border-radius: 12px;
+    background-color: #A3CFF4;
+    
+  }
+  .accordion summary{
+    font-size: 2rem;
+    padding: 2.3rem;
+    cursor: pointer;
+    color: black;
+    border: none;
+  }
+
+  .accordion .content {
+    padding: 2rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    background-color: #EBF5FF;
+    color: #333;
+  }
+
+  .accordion .block[open] {
+    background-color: #0F518A;
+    border: 2px solid #1F4D71;
+  }
+
+.accordion .block[open] summary {
+  color: white; 
 }
+
+@container (min-width:600px){
+  .accordion summary{
+    font-size: 1.125rem;
+  }
+  
+
+}
+}
+
+
+/*-------------*/
 
 @layer detailed-list {
   .detailed-list {
-   
+    list-style: none;
+    background-color: #EBF5FF;
+    border-radius: 1px;
+    margin-top: 3rem;
   }
+
+  .detailed-list .dl {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    }
+
+  .detailed-list .dt {
+    font-weight: 800;
+    color: #1e4b7a;
+    position: relative;
+    padding-left: 1rem;
+  }
+
+  .detailed-list .dt::before {
+    content: "";
+    display: block;
+    width: 1px; 
+    height: 7rem; 
+    background-color: black; 
+    position: absolute; 
+    left: 0; 
+    top: 0;
+  
+  }
+    
+  .detailed-list .dd {
+    margin-left: 1rem;
+    color: #555;
+  }
+
+  @container (min-width: 600px) {
+    .detailed-list .dl {
+      grid-template-columns: 1fr 2fr;
+    }
+
+   
 }
+}
+
+/*-------------*/
 
 @layer call-to-action {
   .cta {
-
+    display: block;
+    padding: 1.5rem 2rem;
+    font-size: 1,5rem;
+    margin-top: 3rem;
+    color: #fff;
+    background-color: #1e4b7a;
+    border-radius: 12px;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 8rem;
+    position: relative;
   }
+
+  .cta:hover {
+    background-color: #163b5e;
+    transform: scale(1.05);
+  }
+
+  @container (min-width: 600px) {
+    .cta {
+      font-size: 1.125rem;
+  }
+}
 }
 
 @layer form {
