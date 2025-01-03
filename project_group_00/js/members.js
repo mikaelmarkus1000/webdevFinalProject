@@ -1,41 +1,41 @@
 function memberThumbnail(member) {
   const thumbnail = `
-  <div class="col-12 ???" id="${member.eid}">
-    <header class="???">
-      <h4 class="???">${member.first_name} ${member.last_name}</h4>
-      <p class="???">
+<div class="col-12 col-xs-6 col-md-4 col-lg-3 thumbnail ps-rel bs-solid b-radius-4 z-1 oflow-hidden" id="${member.eid}">
+    <header class="bgc-1-20-20 info">
+      <h4 class="c1-10-70 pt-2 pl-2 name">${member.first_name} ${member.last_name}</h4>
+      <p class="text-right pr-2 pb-1 email">
         <a href="mailto:${member.mail}@du.se" title="Mail ${member.first_name} ${member.last_name}">${member.mail}@du.se</a>
       </p>
     </header>           
-    <div class="???">
-      <picture class="???"> 
+    <div class="link">
+      <picture class="image"> 
         <source
           type="image/webp"
-          srcset="./img/informative/member/${member.id}/webp/${member.id}_256.webp ???,
-                  ./img/informative/member/${member.id}/webp/${member.id}_384.webp ???,
-                  ./img/informative/member/${member.id}/webp/${member.id}_512.webp ???"
-          sizes="(min-width: 996px) ???,
-                 (min-width: 768px) ???,
-                 (min-width: 480px) ???,
-                                    ???">
+          srcset="./img/informative/member/${member.id}/webp/${member.id}_256.webp 256w,
+                  ./img/informative/member/${member.id}/webp/${member.id}_384.webp 384w,
+                  ./img/informative/member/${member.id}/webp/${member.id}_512.webp 512w"
+          sizes="(min-width: 996px) 20vw,
+                 (min-width: 768px) 29vw,
+                 (min-width: 480px) 46vw,
+                                    94vw">
         <source
           type="image/jpg"
-          srcset="./img/informative/member/${member.id}/jpg/${member.id}_256.jpg ???,
-                  ./img/informative/member/${member.id}/jpg/${member.id}_384.jpg ???,
-                  ./img/informative/member/${member.id}/jpg/${member.id}_512.jpg ???"
-          sizes="(min-width: 996px) ???,
-                 (min-width: 768px) ???,
-                 (min-width: 480px) ???,
-                                    ???">
+          srcset="./img/informative/member/${member.id}/jpg/${member.id}_256.jpg 256w
+                  ./img/informative/member/${member.id}/jpg/${member.id}_384.jpg 384w,
+                  ./img/informative/member/${member.id}/jpg/${member.id}_512.jpg 512w"
+          sizes="(min-width: 996px) 20vw,
+                 (min-width: 768px) 29vw,
+                 (min-width: 480px) 46vw,
+                                    94vw">
         <img 
-          class="???"
+          class="ratio"
           src="./img/informative/member/${member.id}/jpg/${member.id}_512.jpg" 
           width="512"
           height="512"
           alt="${member.alt}"
           itemprop="image">
       </picture>
-      <a class="???" href="./account.html" title="Link to ${member.first_name} ${member.last_name} profile">Go to profile</a>
+      <a class="z-2 ps-abs link" href="./account.html" title="Link to ${member.first_name} ${member.last_name} profile">Go to profile</a>
     </div>
   </div>
   `;
