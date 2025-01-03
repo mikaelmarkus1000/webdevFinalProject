@@ -18,14 +18,14 @@
       & .name {
         font-weight: 400;
         letter-spacing: .1rem;
-        font-size: clamp(1.9rem, 4vmin, 2.8rem);
+        font-size: 1.9rem;
       }
   
       & .email {
         font-weight: 100;
         a {
           color: hsl(var(--hue-1), 10%, 70%);
-          font-size: clamp(1.2rem, 2.2vmin, 2.9rem);
+          font-size: 1.2rem;
           font-weight: 400;
           font-style: italic;
           letter-spacing: .1rem;
