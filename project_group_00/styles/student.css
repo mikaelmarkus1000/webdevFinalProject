@@ -4,8 +4,23 @@
 @layer card {
   .card {
     
+    .header{ 
+      position: relative;
+      padding: 1.5rem 1rem;
+
+      
+
+       .figure {
+        position: absolute
+      }
+      
+    }
+    .footer {
+      padding: 2.5rem 1rem;
+      
 
     }
+  }
   }
 
   @layer thumbnail {
