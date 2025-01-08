@@ -2,27 +2,67 @@
 
 
 @layer card {
-  .card {
-    
-    .header{ 
-      position: relative;
-      padding: 1.5rem 1rem;
-
+  @media only screen and (min-width: 400px) {
+     .card > .header > .figure{
+      margin-right: 0.5rem;
       
+     
+    }
+  }
+
+  .card {
+    .header{ 
+      padding: 1rem 1rem;
+
+      .headerText{
+
+        margin-top: 1.5rem;
+        font-size: 3rem;
+        padding-left: 0.5rem;
+        padding-top: 1rem;
+
+        .lowerHeaderText{
+          font-size: 1.6rem;
+          padding-bottom: 0.5rem;
+          
+          
+        }
+
+      }
 
        .figure {
-        position: absolute
+        
+      }    
+    }
+    .mainBox{
+      padding-top: 2.5rem;
+      padding-bottom: 2.5rem;
+      padding-left: 1.5rem;
+      .boxText{
+        padding-top: 1rem;
+        font-size: 1.55rem;
       }
       
     }
+   
     .footer {
-      padding: 2.5rem 1rem;
+        display: flex;
+        flex-direction: row-reverse;
+        padding: 1.8rem 1.5rem;
       
-
+      
+      .footerButton{
+        font-size: 1.4rem;
+        width: 10.5rem;
+        height: 3.5rem;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 3.5rem;       
+      }
     }
+        
   }
-  }
-
+}
   @layer thumbnail {
     .thumbnail {
       border-width: .39rem;
