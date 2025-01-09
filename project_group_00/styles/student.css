@@ -1,69 +1,67 @@
 @layer card, form, thumbnail, accordion, detailed-list, call-to-action, subgrid;
-
-
-@layer card {
-  @media only screen and (max-width: 400px) {
-     .card > .header > .figure{
-      margin-right: 4rem;
-    }
-  }
-  @media only screen and (max-width: 450px) {
-    .card > .header > .figure{
-     margin-right: 2.9rem;
-    }
-  }
-    @media only screen and (max-width: 500px) {
-      .card > .header > .figure{
-       margin-right: 2.7rem;}
-      }
-    @media only screen and (max-width: 550px) {
-        .card > .header > .figure{
-         margin-right: 2.5rem;}
+    
+    @media only screen and (min-width: 996px) {
+        .card { 
+          
         }
-    @media only screen and (max-width: 600px) {
-        .card > .header > .figure{
-         margin-right: 2.3rem;}
-        }    
-    @media only screen and (max-width: 650px) {
-        .card > .header > .figure{
-         margin-right: 2.1rem;}
-        }        
- }
 
 
-
+        .card > .header {
+          height: 26%;
+        }
+          .card > .mainBox {
+              flex: 1;
+              height: 56%; /* Adjust height to 50% of the card */
+              box-sizing: border-box;
+          }
+         .card > .footer {
+          
+            
+          } 
+      }
+                
+  
   .card {
     .header{ 
       padding: 1rem 1rem;
-
       .headerText{
-
         margin-top: 1.5rem;
         font-size: 3rem;
         padding-left: 0.5rem;
         padding-top: 1rem;
-
         .lowerHeaderText{
           font-size: 1.6rem;
           padding-bottom: 0.5rem;
-          
-          
         }
 
       }
 
        .figure {
         
+    
       }    
     }
     
     .mainBox{
-      padding-top: 2.5rem;
-      padding-bottom: 2.5rem;
+      display: flex; /* Makes the container flexible */
+      flex-direction: column; /* Aligns content vertically */
+      justify-content: space-between; /* Ensures spacing between elements */
+      box-sizing: border-box; /* Includes padding in height/width calculation */
+      padding-right: 2rem;
+
+
+      width: 100%;
+      
+      padding-top: 1.5rem;
+      padding-bottom: 2rem;
       padding-left: 1.5rem;
+    
+
       .boxText{
-        padding-top: 1rem;
+        padding-top: 1.5rem;
         font-size: 1.55rem;
+        
+        
       }
       
     }
@@ -85,7 +83,7 @@
     }
         
   }
-}
+
 
   @layer thumbnail {
     .thumbnail {
