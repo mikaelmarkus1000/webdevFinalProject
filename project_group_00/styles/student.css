@@ -1,5 +1,5 @@
 @layer card, form, thumbnail, accordion, detailed-list, call-to-action, subgrid;
-    
+  @layer card{
     @media only screen and (min-width: 996px) {
         .card { 
           
@@ -11,7 +11,7 @@
         }
           .card > .mainBox {
               flex: 1;
-              height: 56%; /* Adjust height to 50% of the card */
+              height: 56%; 
               box-sizing: border-box;
           }
       }
@@ -84,15 +84,8 @@
     }
     
     .mainBox{
-      display: flex; /* Makes the container flexible */
-      flex-direction: column; /* Aligns content vertically */
-      justify-content: space-between; /* Ensures spacing between elements */
-      box-sizing: border-box; /* Includes padding in height/width calculation */
       padding-right: 2rem;
-
-
       width: 100%;
-      
       padding-top: 1.5rem;
       padding-bottom: 2rem;
       padding-left: 1.5rem;
@@ -124,7 +117,7 @@
     }
         
   }
-
+}
 
   @layer thumbnail {
     .thumbnail {
