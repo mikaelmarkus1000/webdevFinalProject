@@ -135,15 +135,12 @@
   
       & .name {
         font-weight: 400;
-        letter-spacing: .1rem;
-        font-size: 1.9rem;
+        letter-spacing: .05rem;
       }
   
       & .email {
-        font-weight: 100;
         a {
           color: hsl(var(--hue-1), 10%, 70%);
-          font-size: 1.2rem;
           font-weight: 400;
           font-style: italic;
           letter-spacing: .1rem;
@@ -175,10 +172,26 @@
         width: 100%;
         height: auto;
       }
+
+      @media only screen and (min-width: 400px) {
+        & .name {
+          margin-bottom: -.25rem;
+          font-size: 2rem;
+        }
+
+        & .email {
+          a {
+            font-size: 1.2rem;
+            padding-bottom: 10rem;
+            margin-bottom: -.25rem;
+          }
+        }
+      }
   
       @media only screen and (min-width: 480px) {
         & .name {
-          font-size: 1.65rem;
+          margin-bottom: -.35rem;
+          font-size: 1.7rem;
         }
   
         & .email {
@@ -212,7 +225,8 @@
   
         &:hover .name {
           order: 1;
-          font-size: 1.5rem;
+          font-size: 1.7rem;
+          font-weight: 400;
         }
     
         &:hover .email {
