@@ -3,7 +3,7 @@ function memberThumbnail(member) {
 <div class="col-12 col-xs-6 col-md-4 col-lg-3 thumbnail ps-rel bs-solid b-radius-4 z-1 oflow-hidden" id="${member.eid}">
     <header class="bgc-1-20-20 info">
       <h4 class="c1-10-70 pt-2 pl-2 name">${member.first_name} ${member.last_name}</h4>
-      <p class="text-right pr-2 pb-1 email">
+      <p class="text-right pr-2 email">
         <a href="mailto:${member.mail}@du.se" title="Mail ${member.first_name} ${member.last_name}">${member.mail}@du.se</a>
       </p>
     </header>           
