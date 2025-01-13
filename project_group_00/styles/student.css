@@ -1,135 +1,108 @@
 @layer card, form, thumbnail, accordion, detailed-list, call-to-action, subgrid;
-  @layer card {
-    @media only screen and (min-width: 996px) {
-      .card {
-        .header {
-          height: 26%;
-        }
-    
-        .mainBox {
-          flex: 1;
-          height: 56%;
-          box-sizing: border-box;
-        }
-      }
+.card {
+  @media only screen and (min-width: 996px) {
+    .header {
+      height: 26%;
     }
-    
-    @media (min-width: 0px) and (max-width: 400px) {
-      .card {
-        .header {
-          .figure {
-            bottom: 0%;
-            right: 14%;
-          }
-        }
-      }
+
+    .mainBox {
+      flex: 1;
+      height: 56%;
+      box-sizing: border-box;
     }
-    
-    @media (min-width: 401px) and (max-width: 480px) {
-      .card {
-        .header {
-          .figure {
-            bottom: 0%;
-            right: 12%;
-          }
-        }
-      }
+  }
+
+  @media (min-width: 0px) and (max-width: 400px) {
+    .header .figure {
+      bottom: 0%;
+      right: 14%;
     }
-    
-    @media (min-width: 481px) and (max-width: 576px) {
-      .card {
-        .header {
-          .figure {
-            bottom: 0%;
-            right: 10%;
-          }
-        }
-      }
+  }
+
+  @media (min-width: 401px) and (max-width: 480px) {
+    .header .figure {
+      bottom: 0%;
+      right: 12%;
     }
-    
-    @media (min-width: 577px) and (max-width: 768px) {
-      .card {
-        .header {
-          .figure {
-            bottom: 0%;
-            right: 9.5%;
-          }
-        }
-      }
+  }
+
+  @media (min-width: 481px) and (max-width: 576px) {
+    .header .figure {
+      bottom: 0%;
+      right: 10%;
     }
-    
-    @media (min-width: 769px) and (max-width: 996px) {
-      .card {
-        .header {
-          .figure {
-            bottom: 0%;
-            right: 9.5%;
-          }
-        }
-      }
+  }
+
+  @media (min-width: 577px) and (max-width: 768px) {
+    .header .figure {
+      bottom: 0%;
+      right: 9.5%;
     }
-    
-    @media (min-width: 997px) and (max-width: 1280px) {
-      .card {
-        .header {
-          .figure {
-            bottom: 0%;
-            right: 12%;
-          }
-        }
-      }
+  }
+
+  @media (min-width: 769px) and (max-width: 996px) {
+    .header .figure {
+      bottom: 0%;
+      right: 9.5%;
     }
-  }  
-    .card {
-      .header {
-        position: relative;
-        padding: 1rem 1rem;
-    
-        .headerText {
-          margin-top: 1.5rem;
-          font-size: 3rem;
-          padding-left: 0.5rem;
-          padding-top: 1rem;
-    
-          .lowerHeaderText {
-            font-size: 1.6rem;
-            
-          }
-        }
-    
-        .figure {
-          position: absolute;
-          border-radius: 50%;
-          margin-top: 2rem;
-        }
-      }
-    
-      .mainBox {
-        padding: 1.5rem 2rem 1.5rem 1.5rem;
-        width: 100%;
-        margin-top: 0.5rem;
-    
-        .boxText {
-          padding-top: 1rem;
-          font-size: 1.55rem;
-        }
-      }
-    
-      .footer {
-        display: flex;
-        flex-direction: row-reverse;
-        padding: 1.8rem 1.5rem;
-    
-        .footerButton {
-          font-size: 1.4rem;
-          width: 11rem;
-          height: 3.5rem;
-          text-align: center;
-          vertical-align: middle;
-          line-height: 3.7rem;
-        }
-      }
+  }
+
+  @media (min-width: 997px) and (max-width: 1280px) {
+    .header .figure {
+      bottom: 0%;
+      right: 12%;
     }
+  }
+}
+
+.header {
+  position: relative;
+  padding: 1rem 1rem;
+
+  .headerText {
+    margin-top: 1.5rem;
+    font-size: 3rem;
+    padding-left: 0.5rem;
+    padding-top: 1rem;
+
+    .lowerHeaderText {
+      font-size: 1.6rem;
+    }
+  }
+
+  .figure {
+    position: absolute;
+    border-radius: 50%;
+    margin-top: 2rem;
+  }
+}
+
+.mainBox {
+  padding: 1.5rem 2rem 1.5rem 1.5rem;
+  width: 100%;
+  margin-top: 0.5rem;
+
+  .boxText {
+    padding-top: 1rem;
+    font-size: 1.55rem;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 1.8rem 1.5rem;
+
+  .footerButton {
+    font-size: 1.4rem;
+    width: 11rem;
+    height: 3.5rem;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 3.7rem;
+  }
+}
+
 
   @layer thumbnail {
     .thumbnail {
