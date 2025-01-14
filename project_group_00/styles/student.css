@@ -365,59 +365,119 @@
 
 
 @layer form {
-  .form{
+  .form {
+    container-type: inline-size;
+    container-name: form;
     display: grid;
     grid-template-columns: 1fr;
-  }
-  .heading {
-    font-size: 8rem;
-  }
-  .help{
-    display: none;
+    gap: 2rem; 
+
+    .heading {
+      font-size: 8rem; 
+      color: #013766;
+      font-weight: 600;
+    }
+
+    .help {
+      display: none; 
+    }
+
+    .fieldset {
+      display: grid;
+      gap: 1.5rem; 
+      padding: 1rem;
+
+      .legend {
+        font-size: 3rem;
+        font-weight: 400;
+        color: #013766;
+      }
+
+      .group {
+        display: grid;
+        gap: 0.5rem;
+
+        .label {
+          font-size: 2rem;
+          color: #013766;
+          font-weight: 600;
+        }
+
+        .input,
+        .select {
+          font-size: 2rem;
+          padding: 1rem;
+          border: 1px solid #013766;
+          border-radius: 8px;
+          width: 100%;
+        }
+
+        .error {
+          font-size: 1.4rem;
+          color: red;
+        }
+      }
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: flex-end;
+      gap: 1rem;
+
+      .button {
+        background-color: #1f6bad;
+        color: #dff7ff;
+        font-size: 1.8rem;
+        padding: 0.8rem 1.5rem;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+      }
+    }
   }
 
-  .legend{
-    font-size: 3.5rem;
-    padding-top: 5rem;
-    color: #013766;
-    padding-bottom: 2rem;
-  }
-  .label{
-    font-size: 2.2rem;
-    color: #013766;
-    font-weight: 600;
-  }
-  .input{
-    width: 100%;
-    padding: 1.5rem;
-    border-radius: 15px;
-    border-style: solid;
-    border-width: 0.1rem;
-    border-color: #013766;
-    margin-bottom: 3rem;    
-    font-size: 2.3rem;
-  }
-  .select{
-    width: 100%;
-    padding: 1.5rem;
-    border-radius: 15px;
-    border-style: solid;
-    border-width: 0.1rem;
-    border-color: #013766;
-    font-size: 2.3rem;
-  }
-.buttons{
-  display: flex;
-  justify-content: right;
-    .button{
-      background-color: #1f6bad;
-      font-size: 2.5rem;
-      color: #dff7ff;
-      padding: 1.5rem;
-      margin-left: 3rem;
-      margin-bottom: 10rem;
-      border-radius: 15px;
-
+  @container form (width > 60ch) {
+    .form {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); 
+      gap: 2rem;
+  
+      .heading {
+        font-size: 6rem;
+        grid-column: span 2; 
+        text-align: left;
+      }
+  
+      .fieldset {
+        display: contents; 
+      }
+  
+      .group {
+        grid-column: span 1; 
+        display: flex;
+        flex-direction: column; 
+      }
+  
+      .group:nth-child(odd) {
+        grid-column: 1; 
+      }
+  
+      .group:nth-child(even) {
+        grid-column: 2; 
+      }
+  
+      .input,
+      .select {
+        width: 100%; 
+        padding: 0.8rem;
+        font-size: 1.6rem;
+        box-sizing: border-box;
+      }
+  
+      .buttons {
+        grid-column: span 2; 
+        display: flex;
+      }
     }
   }
 }
