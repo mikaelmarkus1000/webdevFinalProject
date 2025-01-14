@@ -365,13 +365,66 @@
 
 
 @layer form {
-  .form {
-    
+  .form{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .heading {
+    font-size: 8rem;
+  }
+  .help{
+    display: none;
+  }
+
+  .legend{
+    font-size: 3.5rem;
+    padding-top: 5rem;
+    color: #013766;
+    padding-bottom: 2rem;
+  }
+  .label{
+    font-size: 2.2rem;
+    color: #013766;
+    font-weight: 600;
+  }
+  .input{
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 0.1rem;
+    border-color: #013766;
+    margin-bottom: 3rem;    
+    font-size: 2.3rem;
+  }
+  .select{
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 0.1rem;
+    border-color: #013766;
+    font-size: 2.3rem;
+  }
+.buttons{
+  display: flex;
+  justify-content: right;
+    .button{
+      background-color: #1f6bad;
+      font-size: 2.5rem;
+      color: #dff7ff;
+      padding: 1.5rem;
+      margin-left: 3rem;
+      margin-bottom: 10rem;
+      border-radius: 15px;
+
+    }
   }
 }
 
 @layer subgrid {
   .subgrid {
+  }
   
   }
-}
+
