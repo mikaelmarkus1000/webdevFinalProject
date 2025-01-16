@@ -112,12 +112,12 @@
       display: flex;
       flex-direction: column;
       
-      & .name {
+      .name {
         font-weight: 400;
         letter-spacing: .05rem;
       }
   
-      & .email {
+      .email {
         a {
           color: hsl(var(--hue-1), 10%, 70%);
           font-weight: 400;
@@ -126,17 +126,17 @@
         }
       }
   
-      & .picture {
+      .picture {
         order: 1;
         flex-grow: 1;
       }
   
-      & .info {
+      .info {
         order: 2;
         width: 100%
       }
   
-      & .link {
+      .link {
         top: 0;
         left: 0;
         width: 100%;
@@ -144,7 +144,7 @@
         text-indent: -9999px;
       }
   
-      & .ratio
+      .ratio
       {
         aspect-ratio: 1 / 1;
         object-fit: cover;
@@ -153,12 +153,12 @@
       }
 
       @media only screen and (min-width: 400px) {
-        & .name {
+        .name {
           margin-bottom: -.15rem;
           font-size: 2rem;
         }
 
-        & .email {
+        .email {
           padding-bottom: .3rem;
           a {
             font-size: 1.2rem;
@@ -167,12 +167,12 @@
       }
   
       @media only screen and (min-width: 480px) {
-        & .name {
+        .name {
           margin-bottom: -.3rem;
           font-size: 1.7rem;
         }
   
-        & .email {
+        .email {
           padding-bottom: .1rem;
           a {
             font-size: 1.1rem;
@@ -181,7 +181,7 @@
       }
   
       @media only screen and (min-width: 768px) {
-        & .info {
+        .info {
           display: none;
         }
   
