@@ -1,58 +1,18 @@
 @layer card, form, thumbnail, accordion, detailed-list, call-to-action, subgrid;
 .card {
-  @media only screen and (min-width: 996px) {
-    .header {
-      height: 26%;
-    }
 
-    .mainBox {
-      flex: 1;
-      height: 56%;
-      box-sizing: border-box;
+  .mainBox {
+    padding: 1.5rem 0.5rem 1.5rem 1.5rem;
+    width: 100%;
+    margin-top: 0.5rem;
+  
+    .boxText {
+      padding-top: 1rem;
+      font-size: 1.6rem;
+      max-width: 55rem;
     }
   }
 
-  @media (min-width: 0px) and (max-width: 400px) {
-    .header .figure {
-      bottom: 0%;
-      right: 14%;
-    }
-  }
-
-  @media (min-width: 401px) and (max-width: 480px) {
-    .header .figure {
-      bottom: 0%;
-      right: 12%;
-    }
-  }
-
-  @media (min-width: 481px) and (max-width: 576px) {
-    .header .figure {
-      bottom: 0%;
-      right: 10%;
-    }
-  }
-
-  @media (min-width: 577px) and (max-width: 768px) {
-    .header .figure {
-      bottom: 0%;
-      right: 9.5%;
-    }
-  }
-
-  @media (min-width: 769px) and (max-width: 996px) {
-    .header .figure {
-      bottom: 0%;
-      right: 9.5%;
-    }
-  }
-
-  @media (min-width: 997px) and (max-width: 1280px) {
-    .header .figure {
-      bottom: 0%;
-      right: 12%;
-    }
-  }
   .header {
     position: relative;
     padding: 1rem 1rem;
@@ -69,20 +29,10 @@
     }
   
     .figure {
+      bottom: 0%;
       position: absolute;
       border-radius: 50%;
       margin-top: 2rem;
-    }
-  }
-  
-  .mainBox {
-    padding: 1.5rem 2rem 1.5rem 1.5rem;
-    width: 100%;
-    margin-top: 0.5rem;
-  
-    .boxText {
-      padding-top: 1rem;
-      font-size: 1.55rem;
     }
   }
   
@@ -100,7 +50,53 @@
       line-height: 3.7rem;
     }
   }
+
+  @media only screen and (min-width: 0px) {
+    .header .figure {
+      right: 14%;
+    }
+  }
+
+  @media only screen and (min-width: 401px) {
+    .header .figure {
+      right: 12%;
+    }
+  }
+
+  @media only screen and (min-width: 481px) {
+    .header .figure {
+      right: 10%;
+    }
+  }
+
+  @media only screen and (min-width: 577px) {
+    .header .figure {
+      right: 9.5%;
+    }
+    .mainBox{
+      .boxText {
+        max-width: 49rem;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 769px){
+    .header .figure {
+      right: 9.5%;
+    }
+  }
+
+  @media only screen and (min-width: 996px) {
+    .header .figure {
+      right: 12%;
+    }
+
+    .mainBox {
+      height: 56%;
+    }
+  }
 }
+
 
 @layer thumbnail {
   .thumbnail {
@@ -663,10 +659,11 @@
           padding: 1rem 1.9rem;
           border-radius: 1.3rem;
           margin-inline-start: 1.3rem;
+        }
       }
     }
-  }
-} 
+  } 
+}
 
 @layer subgrid {
   .subgrid {
@@ -809,4 +806,3 @@
     }
   }
 }
-
