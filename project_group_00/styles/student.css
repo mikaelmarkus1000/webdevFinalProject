@@ -1,46 +1,157 @@
 @layer card, form, thumbnail, accordion, detailed-list, call-to-action, subgrid;
-.card {
+@layer card {
+  .card {
+    @media (width >= 996px) {
+      .header {
+        height: 26%;
+      }
 
-  .mainBox {
-    padding: 1.5rem 0.5rem 1.5rem 1.5rem;
-    width: 100%;
-    margin-top: 0.5rem;
-  
-    .boxText {
-      padding-top: 1rem;
-      font-size: 1.6rem;
-      max-width: 55rem;
+      .mainBox {
+        flex: 1;
+        height: 56%;
+        box-sizing: border-box;
+      }
     }
   }
 
   .header {
     position: relative;
     padding: 1rem 1rem;
-  
+
     .headerText {
       margin-top: 1.5rem;
       font-size: 3rem;
       padding-left: 0.5rem;
       padding-top: 1rem;
-  
+
       .lowerHeaderText {
         font-size: 1.6rem;
       }
     }
-  
+
     .figure {
-      bottom: 0%;
       position: absolute;
       border-radius: 50%;
       margin-top: 2rem;
+      @media (width >= 0px) {
+        bottom: 0%;
+        right: 14%;
+      }
+      @media (width >= 401px) {
+        bottom: 0%;
+        right: 12%;
+      }
+      @media (width >= 481px) {
+        bottom: 0%;
+        right: 10%;
+      }
+      @media (width >= 577px) {
+        bottom: 0%;
+        right: 9.5%;
+      }
+      @media (width >= 589px) {
+        bottom: 0%;
+        right: 9.5%;
+      }
+      @media (width >= 592px) {
+        bottom: 0%;
+        right: 9.5%;
+      }
+      @media (width >= 616px) {
+        bottom: 0%;
+        right: 9.5%;
+      }
+      @media (width >= 651px) {
+        bottom: 0%;
+        right: 8.5%;
+      }
+      @media (width >= 664px) {
+        bottom: 0%;
+        right: 8.5%;
+      }
+      @media (width >= 686px) {
+        bottom: 0%;
+        right: 8.5%;
+      }
+      @media (width >= 700px) {
+        bottom: 0%;
+        right: 8.5%;
+      }
+      @media (width >= 715px) {
+        bottom: 0%;
+        right: 8.0%;
+      }
+      @media (width >= 741px) {
+        bottom: 0%;
+        right: 8.0%;
+      }
+      @media (width >= 753px) {
+        bottom: 0%;
+        right: 8.0%;
+      }
+      @media (width >= 754px) {
+        bottom: 0%;
+        right: 9.0%;
+      }
+      @media (width >= 997px) {
+        bottom: 0%;
+        right: 13%;
+      }
     }
   }
-  
+
+  .mainBox {
+    padding: 1.5rem 3rem 1.5rem 1.5rem;
+    width: 100%;
+    margin-top: 0.5rem;
+
+    .boxText {
+      padding-top: 1rem;
+      font-size: 1.55rem;
+      @media (width >= 577px) {
+        padding: 1rem 0rem 1rem 0rem;
+      }
+      @media (width >= 589px) {
+        padding: 1rem 0rem 1rem 0rem;
+      }
+      @media (width >= 592px) {
+        padding: 1rem 0rem 0rem 0rem;
+      }
+      @media (width >= 616px) {
+        padding: 1rem 2rem 0rem 0rem;
+      }
+      @media (width >= 651px) {
+        padding: 1rem 6vh 0rem 0rem;
+      }
+      @media (width >= 664px) {
+        padding: 1rem 9vh 0rem 0rem;
+      }
+      @media (width >= 686px) {
+        padding: 1rem 10vh 0rem 0rem;
+      }
+      @media (width >= 700px) {
+        padding: 1rem 13vh 0rem 0rem;
+      }
+      @media (width >= 715px) {
+        padding: 1rem 15vh 0rem 0rem;
+      }
+      @media (width >= 741px) {
+        padding: 1rem 12rem 0rem 0rem;
+      }
+      @media (width >= 753px) {
+        padding: 1rem 13rem 0rem 0rem;
+      }
+      @media (width >= 768px) {
+        padding: 1rem 0rem 0rem 0rem;
+      }
+    }
+  }
+
   .footer {
     display: flex;
     flex-direction: row-reverse;
     padding: 1.8rem 1.5rem;
-  
+
     .footerButton {
       font-size: 1.4rem;
       width: 11rem;
@@ -50,54 +161,7 @@
       line-height: 3.7rem;
     }
   }
-
-  @media only screen and (min-width: 0px) {
-    .header .figure {
-      right: 14%;
-    }
-  }
-
-  @media only screen and (min-width: 401px) {
-    .header .figure {
-      right: 12%;
-    }
-  }
-
-  @media only screen and (min-width: 481px) {
-    .header .figure {
-      right: 10%;
-    }
-  }
-
-  @media only screen and (min-width: 577px) {
-    .header .figure {
-      right: 9.5%;
-    }
-    .mainBox{
-      .boxText {
-        max-width: 49rem;
-      }
-    }
-  }
-
-  @media only screen and (min-width: 769px){
-    .header .figure {
-      right: 9.5%;
-    }
-  }
-
-  @media only screen and (min-width: 996px) {
-    .header .figure {
-      right: 12%;
-    }
-
-    .mainBox {
-      height: 56%;
-    }
-  }
 }
-
-
 @layer thumbnail {
   .thumbnail {
     border-width: .39rem;
