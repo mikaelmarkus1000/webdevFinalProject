@@ -310,11 +310,11 @@
       cursor: pointer;
       font-size: 2rem;
 
-        @container accordion (width > 60ch) {
+        @container (width > 60ch) {
           font-size: 2rem;
           padding: 2rem;
         }
-    }
+      }
     .content {
       padding: 2rem;
       background-color: #EBF5FF;
@@ -326,7 +326,7 @@
       .text{
         max-width: 50ch; 
 
-      @container accordion (width > 60ch) {
+      @container (width > 60ch) {
         font-size: 1.6rem;
         }
       }
@@ -351,13 +351,12 @@
         font-size: 1.6rem;
         line-height: 1.5;
         padding-left: 1rem;
-        text-align: left;       
+        text-align: left;
         gap: 0.5rem;
-
       }
 
       .dd {
-        position: relative; 
+        position: relative;
         color: #333;
         font-size: 1.6rem;
         line-height: 1.5;
@@ -369,17 +368,15 @@
         &::before {
           content: "";
           position: absolute;
-          left: -1rem; 
+          left: -1rem;
           bottom: 1rem;
-          width: 1px; 
-          height: calc(100% + 15px); 
+          width: 1px;
+          height: calc(100% + 15px);
           background-color: black;
         }
       }
-    }
 
-    @container detailed-list (width > 60ch) {
-      .dl {
+      @container (width > 60ch) {
         grid-template-columns: auto 1fr;
         align-items: start;
         gap: 1rem;
@@ -394,7 +391,7 @@
           margin-left: 1rem;
 
           &::before {
-            left: -1rem; 
+            left: -1rem;
             bottom: 1rem;
             height: calc(100% - 15px);
           }
