@@ -166,15 +166,34 @@
   .thumbnail {
     border-width: .39rem;
     border-color: hsl(var(--hue-1), 20%, 20%);
-
     display: flex;
     flex-direction: column;
     
     .name {
       font-weight: 400;
       letter-spacing: .05rem;
+      @media (width >= 400px) {
+        margin-bottom: -.15rem;
+        font-size: 2rem;
+      }
+      @media (width >= 480px) {
+        margin-bottom: -.3rem;
+        font-size: 1.7rem;
+      }
+      @media (width >= 768px) {
+        &:hover {
+          order: 1;
+          font-size: 1.6rem;
+          font-weight: 400;
+        }
+      }
+      @media (width >= 996px) {
+        &:hover {
+          font-size: 1.2rem;
+        }
+      }
     }
-
+    
     .email {
       a {
         color: hsl(var(--hue-1), 10%, 70%);
@@ -182,18 +201,43 @@
         font-style: italic;
         letter-spacing: .1rem;
       }
+      @media (width >= 400px) {
+        padding-bottom: .3rem;
+        a {
+          font-size: 1.2rem;
+        }
+      }
+      @media (width >= 480px) {
+        padding-bottom: .1rem;
+        a {
+          font-size: 1.1rem;
+        }
+      }
+      @media (width >= 768px) {
+        &:hover a {
+          font-size: 1.2rem;
+        }
+      }
+      @media (width >= 996px) {
+        &:hover a {
+          font-size: .9rem;
+        }
+      }
     }
-
+    
     .picture {
       order: 1;
       flex-grow: 1;
     }
-
+    
     .info {
       order: 2;
-      width: 100%
+      width: 100%;
+      @media (width >= 768px) {
+        display: none;
+      }
     }
-
+    
     .link {
       top: 0;
       left: 0;
@@ -201,56 +245,21 @@
       height: 100%;
       text-indent: -9999px;
     }
-
-    .ratio
-    {
+    
+    .ratio {
       aspect-ratio: 1 / 1;
       object-fit: cover;
       width: 100%;
       height: auto;
     }
-
-    @media only screen and (min-width: 400px) {
-      .name {
-        margin-bottom: -.15rem;
-        font-size: 2rem;
-      }
-
-      .email {
-        padding-bottom: .3rem;
-        a {
-          font-size: 1.2rem;
-        }
-      }
-    }
-
-    @media only screen and (min-width: 480px) {
-      .name {
-        margin-bottom: -.3rem;
-        font-size: 1.7rem;
-      }
-
-      .email {
-        padding-bottom: .1rem;
-        a {
-          font-size: 1.1rem;
-        }
-      }
-    }
-
-    @media only screen and (min-width: 768px) {
-      .info {
-        display: none;
-      }
-
+    
+    @media (width >= 768px) {
       &:hover {
         transform: scale(1.09);
       }
-
       &:hover .image {
         filter: saturate(2) brightness(.7);
       }
-
       &:hover .info {
         display: flex;
         flex-direction: column;
@@ -259,31 +268,8 @@
         z-index: 1;
         opacity: .9;
       }
-
-      &:hover .name {
-        order: 1;
-        font-size: 1.6rem;
-        font-weight: 400;
-      }
-  
-      &:hover .email {
-        order: 2;
-        a {
-          font-size: 1.2rem;
-        }
-      }
     }
-
-    @media only screen and (min-width: 996px) {
-      &:hover .name {
-        font-size: 1.2rem;
-      }
-
-      &:hover .email a {
-        font-size: .9rem;
-      }
-    }
-  }  
+  }
 }
 
 @layer accordion {
