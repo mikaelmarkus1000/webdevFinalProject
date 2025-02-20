@@ -1,167 +1,118 @@
 @layer card, form, thumbnail, accordion, detailed-list, call-to-action, subgrid;
+
 @layer card {
   .card {
-    @media (width >= 996px) {
-      .header {
-        height: 26%;
+    display: flex;
+    flex-direction: column; 
+    border-radius: 13px;
+    overflow: hidden;
+    background-color: inherit;
+    color: inherit;
+
+    .header {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      position: relative;
+
+
+      .headerText {
+        font-size: 3rem;
+        line-height: 1.2;
+        text-align: left; 
+        width: 100%; 
+        padding-top: 3rem;
+        padding-left: 1.5rem;
+       
       }
-
-      .mainBox {
-        flex: 1;
-        height: 56%;
-        box-sizing: border-box;
-      }
-    }
-  }
-
-  .header {
-    position: relative;
-    padding: 1rem 1rem;
-
-    .headerText {
-      margin-top: 1.5rem;
-      font-size: 3rem;
-      padding-left: 0.5rem;
-      padding-top: 1rem;
 
       .lowerHeaderText {
         font-size: 1.6rem;
+        display: block;
+        text-align: left;
+        padding-bottom: 1.5rem;
+      }
+
+      .figure {
+        position: absolute;
+        right: 6.5vh;
+        bottom: 0%; 
+        border-radius: 50%;
       }
     }
 
-    .figure {
-      position: absolute;
-      border-radius: 50%;
-      margin-top: 2rem;
-      @media (width >= 0px) {
-        bottom: 0%;
-        right: 14%;
-      }
-      @media (width >= 401px) {
-        bottom: 0%;
-        right: 12%;
-      }
-      @media (width >= 481px) {
-        bottom: 0%;
-        right: 10%;
-      }
-      @media (width >= 577px) {
-        bottom: 0%;
-        right: 9.5%;
-      }
-      @media (width >= 589px) {
-        bottom: 0%;
-        right: 9.5%;
-      }
-      @media (width >= 592px) {
-        bottom: 0%;
-        right: 9.5%;
-      }
-      @media (width >= 616px) {
-        bottom: 0%;
-        right: 9.5%;
-      }
-      @media (width >= 651px) {
-        bottom: 0%;
-        right: 8.5%;
-      }
-      @media (width >= 664px) {
-        bottom: 0%;
-        right: 8.5%;
-      }
-      @media (width >= 686px) {
-        bottom: 0%;
-        right: 8.5%;
-      }
-      @media (width >= 700px) {
-        bottom: 0%;
-        right: 8.5%;
-      }
-      @media (width >= 715px) {
-        bottom: 0%;
-        right: 8.0%;
-      }
-      @media (width >= 741px) {
-        bottom: 0%;
-        right: 8.0%;
-      }
-      @media (width >= 753px) {
-        bottom: 0%;
-        right: 8.0%;
-      }
-      @media (width >= 754px) {
-        bottom: 0%;
-        right: 9.0%;
-      }
-      @media (width >= 997px) {
-        bottom: 0%;
-        right: 13%;
+    .mainBox {
+      padding: 1rem;
+      font-size: 1.6rem;
+      background-color: white;
+      padding-top: 2rem;
+      
+        
+      .boxText {
+        font-size: 1.50rem;
+        line-height: 1.3;
+        padding: 1rem;
+        
       }
     }
-  }
 
-  .mainBox {
-    padding: 1.5rem 3rem 1.5rem 1.5rem;
-    width: 100%;
-    margin-top: 0.5rem;
-
-    .boxText {
-      padding-top: 1rem;
-      font-size: 1.55rem;
-      @media (width >= 577px) {
-        padding: 1rem 0rem 1rem 0rem;
-      }
-      @media (width >= 589px) {
-        padding: 1rem 0rem 1rem 0rem;
-      }
-      @media (width >= 592px) {
-        padding: 1rem 0rem 0rem 0rem;
-      }
-      @media (width >= 616px) {
-        padding: 1rem 2rem 0rem 0rem;
-      }
-      @media (width >= 651px) {
-        padding: 1rem 6vh 0rem 0rem;
-      }
-      @media (width >= 664px) {
-        padding: 1rem 9vh 0rem 0rem;
-      }
-      @media (width >= 686px) {
-        padding: 1rem 10vh 0rem 0rem;
-      }
-      @media (width >= 700px) {
-        padding: 1rem 13vh 0rem 0rem;
-      }
-      @media (width >= 715px) {
-        padding: 1rem 15vh 0rem 0rem;
-      }
-      @media (width >= 741px) {
-        padding: 1rem 12rem 0rem 0rem;
-      }
-      @media (width >= 753px) {
-        padding: 1rem 13rem 0rem 0rem;
-      }
-      @media (width >= 768px) {
-        padding: 1rem 0rem 0rem 0rem;
+    .footer {
+      display: flex;
+      justify-content: flex-end;
+      padding: 2rem;
+      .footerButton {
+        
+        font-size: 1.4rem;
+        padding: 0.75rem 2rem;
+        text-align: center;
+        background-color: white;
+        color: inherit;
+        border-radius: 8px;
+        text-decoration: none;
       }
     }
-  }
 
-  .footer {
-    display: flex;
-    flex-direction: row-reverse;
-    padding: 1.8rem 1.5rem;
+    @media (min-width: 768px) {
+      .headerText {
+        font-size: 2.4rem;
+      }
+      .mainBox {
+        font-size: 1.4rem;
+      }
+      .footerButton {
+        font-size: 1.2rem;
+      }
 
-    .footerButton {
-      font-size: 1.4rem;
-      width: 11rem;
-      height: 3.5rem;
-      text-align: center;
-      vertical-align: middle;
-      line-height: 3.7rem;
+    }
+
+    @media (min-width: 992px) {
+      .header{
+        height: 26%;
+      }
+      .headerText {
+        font-size: 2.2rem;
+
+        .lowerHeaderText {
+          padding-bottom: 1.5rem;
+          
+        }
+      }
+      .mainBox {
+        height: 56%;
+        box-sizing: border-box;
+        padding-top: 2rem;
+      }
+      .figure {
+        right: 5%;
+      }
+
+      .footerButton {
+        font-size: 1.2rem;
+      }
     }
   }
 }
+
 @layer thumbnail {
   .thumbnail {
     border-width: 0.39rem;
